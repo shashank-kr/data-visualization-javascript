@@ -5,6 +5,8 @@ Data visualization using pure javascript and highchart.
 
 You can get a copy of the project up and running on your local machine and run 'index.html' file.
 Use sample csv data files stored in project's data folder.
+Run index.html file and you get tha page as shown below:
+![Alt text](data-visualization-javascript/screenshots/dashboard-line-pie.png "Title")
 
 ### Prerequisites
 Only browser running on local machine.
