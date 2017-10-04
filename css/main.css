@@ -1,0 +1,163 @@
+body{
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    margin: 0;
+    background:whitesmoke;
+    font-size: small;
+}
+
+h1,h2,h3,h4,h5{
+    text-align: center;
+    color: whitesmoke;
+}
+
+.container
+{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2px;
+    width: auto;
+    background: peru;
+    padding-left: 4%;
+    padding-right: 4%;
+    min-height: 1340px;
+}
+.container__header{
+    background-color: peru;
+    padding-top: 2px;
+}
+
+.container__chart{
+    width: 100%;
+}
+
+.container__raw-table{
+    max-height: 150px;
+    overflow: scroll;
+}
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+th, td {
+    /*font-size: 1em;*/
+    padding: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+th {
+    color:white;
+    /*background-color:steelblue;*/
+    background-color:sandybrown;
+    border:1px solid black;
+}
+
+td {
+    /*border:1px solid steelblue;*/
+    border:1px solid white;
+
+}
+
+td.rowkey {
+    text-align:left;
+}
+
+
+/*tr:hover {
+    color:#000000;
+    background-color:#E0E0E0;
+}
+
+th:hover {
+    color:#000000;
+    background-color:lightsteelblue;
+}*/
+
+tr[chosen=true] {
+    background-color:#B5CDE1;
+}
+
+th[chosen=true] {
+    background-color:lightsteelblue;
+}
+
+#progress_bar {
+     margin: 2px 0;
+     padding: 3px;
+     border: 1px solid #000;
+     font-size: 8px;
+     width: 55%;
+     float: right;
+     clear: both;
+     opacity: 0;
+     -moz-transition: opacity 1s linear;
+     -o-transition: opacity 1s linear;
+     -webkit-transition: opacity 1s linear;
+ }
+#progress_bar.loading {
+    opacity: 1.0;
+}
+#progress_bar .percent {
+    /*background-color: #99ccff;*/
+    background-color: sandybrown;
+    height: auto;
+    width: 0;
+    text-align: left;
+    font-weight: bold;
+}
+
+.container__file-upload{
+    float: right;
+    width: 70%;
+    height: 20px;
+    display: flex;
+}
+.container__file{
+    width: 40%;
+}
+.container__county-list{
+    width: 20%;
+    display: inline-grid;
+    position: absolute;
+}
+
+.display{
+    display:inline;
+}
+
+.hide{
+    display:none;
+}
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+    url('http://i.stack.imgur.com/FhHRx.gif')
+    50% 50%
+    no-repeat;
+    opacity: 0.80;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 80);
+    filter: alpha(opacity = 80);
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.waiting {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.waiting .modal {
+    display: block;
+}

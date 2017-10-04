@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title> Clinical Study Report to the City and County of Colorado</title>
+
+        <link rel="stylesheet" type="text/css" href="./css/line-plot.css" />
+        <link rel="stylesheet" type="text/css" href="./css/main.css" />
+        <link rel="stylesheet" type="text/css" href="./css/pie-plot.css" />
+
+    </head>
+
+    <body>
+
+        <div id="container" class="container">
+            <div class="container__header">
+                <h1>Clinical Study Report to the City and County of Colorado</h1>
+                <hr/>
+            </div>
+
+            <!-- File upload -->
+            <div>
+                <span>Please upload csv file to visualise data...</span>
+                <div class="container__file-upload">
+                    <div class="container__file">
+                        <input type="file" id="files" name="file" />
+                        <button id="cancel-read" class="hide" onclick="abortRead();">Cancel read</button>
+                    </div>
+                    <div id="progress_bar">
+                        <div id="progress_status" class="percent">0%</div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <h3>Clinical Study Report Raw Data</h3>
+            <div id="container-raw-table" class="container__raw-table"></div>
+            <hr/>
+            <div class="container__county">
+                <div id="container-county-list" class="container__county-list">
+                </div>
+                <div><h3>Quarterly Clinical Study Report</h3></div>
+            </div>
+            <div id="container__table"></div>
+            <hr/>
+
+            <div id="plot"></div>
+
+            <div id="pie-plot">
+                <!--<svg width="960" height="500"></svg>-->
+            </div>
+            <div class="container__chart">
+                <div id="container__pie-chart" style="width: 50%; height: 400px;float: left;"></div>
+                <div id="container__donut-chart" style="width: 50%; height: 400px;float:right;"></div>
+            </div>
+            <div class="container__chart">
+                <div id="container__col-line-pie-chart" style="min-width: 310px; width: 100%; height: 400px; margin: 0 auto"></div>
+            </div>
+            <hr/>
+        </div>
+        <div id="load-div" class="hide"></div>
+
+        <!-- Highcharts library-->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+
+        <!-- Charts components-->
+        <script type="text/javascript" src="./js/utility.js"></script>
+        <script type="text/javascript" src="./js/file-uploader.js"></script>
+        <script type="text/javascript" src="./js/setup-plot.js"></script>
+        <script type="text/javascript" src="./js/multi-table.js"></script>
+        <script type="text/javascript" src="./js/pie-highchart.js"></script>
+        <script type="text/javascript" src="./js/donut-highchart.js"></script>
+        <script type="text/javascript" src="./js/col-line-pie-chart.js"></script>
+
+    </body>
+
+
+</html>
+
